@@ -1,0 +1,45 @@
+﻿@model RegisterModel
+
+<div class="row">
+    <div class="col-md-8">
+        <form asp-action="Register" asp-controller="Account" method="post">
+            <div class="text-danger" asp-validation-summary="All"> </div>
+            <div class="form-group row">
+                <label asp-for="UserName" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="UserName" value="@Model.UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Tckimlik" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Tckimlik" value="@Model.Tckimlik" class="form-control" />
+                    <span asp-validation-for="Tckimlik" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Email" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Email" value="@Model.Email" class="form-control" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="Password" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="Password" value="@Model.Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label asp-for="RePassword" class="col-md-2 col-form-label"></label>
+                <div class="col-md-10">
+                    <input asp-for="RePassword" value="@Model.RePassword" class="form-control" />
+                    <span asp-validation-for="RePassword" class="text-danger"></span>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-success"> Kaydet</button>
+        </form>
+    </div>
+</div>
